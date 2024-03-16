@@ -5,14 +5,20 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+    "start": "pnpm ./dist/index.js",
+    "build": "pnpm tsc",
+    "watch": "pnpm tsc -w",
+    "dev": "pnpm nodemon ./dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.28",
     "nodemon": "^3.1.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
