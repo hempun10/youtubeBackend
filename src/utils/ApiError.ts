@@ -1,8 +1,8 @@
-class ApiError extends Error {
+class ApiError<T> extends Error {
   constructor(
     public statusCode: number,
     public message: string,
-    public errors: [] | undefined,
+    public errors: T[] | undefined,
     public stack: string | undefined,
     public data: any | null,
     public success: boolean
