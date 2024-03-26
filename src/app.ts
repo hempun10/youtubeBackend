@@ -17,8 +17,10 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" })); // Different bro
 app.use(express.static("public")); // Serving static files
 app.use(cookieParser()); // for cookies CRUD operations
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+//Routes import
+import userRouter from "./routes/user.routes.js";
+
+//routes decleartion
+app.use("/api/v1/user", userRouter);
 
 export default app;
