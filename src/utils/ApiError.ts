@@ -2,10 +2,10 @@ class ApiError<T> extends Error {
   constructor(
     public statusCode: number,
     public message: string,
-    public errors: T[] | undefined,
-    public stack: string | undefined,
-    public data: any | null,
-    public success: boolean
+    public errors?: T[] | undefined,
+    public stack?: string | undefined,
+    public data?: any | null,
+    public success?: boolean
   ) {
     super(message);
     this.statusCode = statusCode;
