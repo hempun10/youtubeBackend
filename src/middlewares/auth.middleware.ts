@@ -9,7 +9,7 @@ export const verifyJWT = asyncHandler(async (req, res, next) => {
   try {
     //First Try to get accestoken from cookies if cookies are not available then check for header with Authorization key & replace Bearer<Space> to Empty Space Cause The value look like this -> Authorization:Bearer <Token>
     const token =
-      req.cookies?.acesstoken ||
+      req.cookies?.accessToken ||
       req.header("Authorization")?.replace("Bearer ", "");
 
     if (!token) {

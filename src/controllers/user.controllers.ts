@@ -77,7 +77,7 @@ export const loginUser = asyncHandler(async (req, res) => {
 
   //Check username / email
   //username or email
-  if (!username || !email) {
+  if (!(username || email)) {
     throw new ApiError(404, "username or email is required");
   }
   //check password
